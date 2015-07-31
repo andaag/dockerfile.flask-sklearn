@@ -1,0 +1,13 @@
+uwsgi:
+    master: true
+    processes: 16
+    vaccum: true
+    chmod-socket: 666
+    uid: www-data
+    gid: www-data
+    plugins: python34
+    socket: /tmp/app.sock
+    chdir: /app
+    pythonpath: /app
+    module: application
+    touch-reload: /app/application.py
